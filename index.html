@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aplicación de ITIL 4 en las áreas de TI de EVOR</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="deck.css"/>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="headset" viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/><path d="M21 20c0 1.5-2 2-5 2"/></symbol>
+<symbol id="code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6M14 4l-4 16"/></symbol>
+<symbol id="server" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5l-6 5.5M12 11.5l6 5.5"/></symbol>
+<symbol id="db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+<symbol id="backup" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></symbol>
+<symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></symbol>
+<symbol id="lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+<symbol id="activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+<symbol id="book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5V22h16"/></symbol>
+<symbol id="refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M3 21v-5h5"/></symbol>
+<symbol id="gauge" viewBox="0 0 24 24"><path d="M12 14l4-4"/><path d="M3.3 17a10 10 0 1 1 17.4 0"/></symbol>
+<symbol id="list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+<symbol id="edit" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+</defs>
+</svg>
+
+<div id="intro" role="button" tabindex="0" aria-label="Haz clic para comenzar">
+  <div class="grid-bg grid-bg-fade"></div>
+  <canvas id="stars"></canvas>
+  <div class="intro-inner">
+    <div id="pixlogo" aria-hidden="true"></div>
+    <p class="intro-hint">Haz clic para comenzar</p>
+  </div>
+</div>
+
+<nav class="nav">
+  <span class="nav-logo">EVOR</span>
+  <span class="nav-count"><b id="cur">01</b> / 06</span>
+</nav>
+<div class="progress"></div>
+
+<main class="deck">
+
+<!-- 1 · PORTADA -->
+<section class="slide cover">
+  <div class="grid-bg grid-bg-fade"></div>
+  <div class="wrap">
+    <div class="hero-tag rise"><i></i>Gestión de servicios de TI · ITIL 4</div>
+    <h1 class="hero-title rise">Aplicación de ITIL 4<span class="l2">en las áreas de TI de EVOR</span></h1>
+    <p class="lead rise">Diagnóstico y oportunidades de mejora en la gestión de servicios de TI.</p>
+    <div class="meta rise">
+      <div><small>Nombre</small><span contenteditable="true" spellcheck="false">Escribe tu nombre</span></div>
+      <div><small>Materia</small><span contenteditable="true" spellcheck="false">Escribe la materia</span></div>
+      <div><small>Grupo</small><span contenteditable="true" spellcheck="false">Escribe el grupo</span></div>
+      <div><small>Fecha</small><span contenteditable="true" spellcheck="false">Escribe la fecha</span></div>
+    </div>
+    <div class="chips rise">
+      <div class="chip"><div class="icon-box"><svg class="i"><use href="#headset"/></svg></div>Soporte</div>
+      <div class="chip"><div class="icon-box"><svg class="i"><use href="#code"/></svg></div>Desarrollo</div>
+      <div class="chip"><div class="icon-box"><svg class="i"><use href="#server"/></svg></div>Site</div>
+      <div class="chip"><div class="icon-box"><svg class="i"><use href="#network"/></svg></div>Redes</div>
+      <div class="chip"><div class="icon-box"><svg class="i"><use href="#shield"/></svg></div>Seguridad</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · SOPORTE Y DESARROLLO -->
+<section class="slide">
+  <div class="wrap">
+    <div class="head rise"><div class="eyebrow">02 · Soporte y Desarrollo</div>
+      <h2 class="s-title">ITIL 4 en Soporte y Desarrollo</h2>
+      <p class="s-sub">Ordena ambas áreas, mejora la atención y reduce interrupciones en los servicios.</p></div>
+    <div class="cols2 rise">
+      <div class="card">
+        <div class="card-h"><div class="icon-box"><svg class="i"><use href="#headset"/></svg></div><h3>Soporte</h3></div>
+        <ul>
+          <li>Atención de incidentes y solicitudes de usuarios</li>
+          <li>Registro y seguimiento de problemas</li>
+          <li>Establecimiento de prioridades</li>
+          <li>Escalamiento de casos</li>
+        </ul>
+        <div class="tags"><span class="tag w">Gestión de Incidentes</span><span class="tag w">Mesa de Servicio</span><span class="tag w">Gestión de Solicitudes</span></div>
+      </div>
+      <div class="card">
+        <div class="card-h"><div class="icon-box"><svg class="i"><use href="#code"/></svg></div><h3>Desarrollo</h3></div>
+        <ul>
+          <li>Documentación de sistemas</li>
+          <li>Control de cambios</li>
+          <li>Pruebas antes de implementar modificaciones</li>
+          <li>Seguimiento de errores</li>
+        </ul>
+        <div class="tags"><span class="tag w">Habilitación del Cambio</span></div>
+      </div>
+    </div>
+    <div class="banner rise"><svg class="i"><use href="#target"/></svg><div><b>Con ITIL 4:</b> <span>procesos claros → mejor atención → menos interrupciones.</span></div></div>
+  </div>
+</section>
+
+<!-- 3 · SITE -->
+<section class="slide">
+  <div class="wrap">
+    <div class="head rise"><div class="eyebrow">03 · Site</div>
+      <h2 class="s-title">Site: infraestructura e información importante</h2>
+      <p class="s-sub">Espacio donde se concentra la infraestructura tecnológica que permite operar los servicios de TI.</p></div>
+    <div class="flow rise">
+      <div class="node"><div class="icon-box"><svg class="i"><use href="#server"/></svg></div><b>Servidores</b><span>Operan los servicios</span></div>
+      <div class="arrow"><svg class="i"><use href="#arrow"/></svg></div>
+      <div class="node"><div class="icon-box"><svg class="i"><use href="#db"/></svg></div><b>Almacenamiento</b><span>Resguarda datos</span></div>
+      <div class="arrow"><svg class="i"><use href="#arrow"/></svg></div>
+      <div class="node"><div class="icon-box"><svg class="i"><use href="#backup"/></svg></div><b>Respaldos</b><span>Protegen la información</span></div>
+      <div class="arrow"><svg class="i"><use href="#arrow"/></svg></div>
+      <div class="node"><div class="icon-box"><svg class="i"><use href="#globe"/></svg></div><b>Disponibilidad</b><span>Información accesible</span></div>
+    </div>
+    <div class="cols3 rise">
+      <div class="card mini"><div class="icon-box"><svg class="i"><use href="#server"/></svg></div><h4>Infraestructura y Plataformas</h4><p>Mantener operativa la base tecnológica.</p></div>
+      <div class="card mini"><div class="icon-box"><svg class="i"><use href="#lock"/></svg></div><h4>Seguridad de la Información</h4><p>Proteger la información y sus respaldos.</p></div>
+      <div class="card mini"><div class="icon-box"><svg class="i"><use href="#activity"/></svg></div><h4>Monitoreo y Gestión de Eventos</h4><p>Detectar a tiempo y prevenir interrupciones.</p></div>
+    </div>
+    <p class="note rise">Se presenta la función del site; los controles específicos se plantean como aplicación recomendada, no como práctica documentada.</p>
+  </div>
+</section>
+
+<!-- 4 · POLÍTICAS Y REDES -->
+<section class="slide">
+  <div class="wrap">
+    <div class="head rise"><div class="eyebrow">04 · Políticas del Site y Redes</div>
+      <h2 class="s-title">Servicios estables, seguros y disponibles</h2>
+      <p class="s-sub">ITIL 4 conecta las políticas del site con la operación diaria de la red.</p></div>
+    <div class="cols2 rise">
+      <div class="card">
+        <div class="card-h"><div class="icon-box"><svg class="i"><use href="#shield"/></svg></div><h3>Políticas del Site</h3></div>
+        <ul>
+          <li>Control de acceso físico y lógico</li>
+          <li>Permisos de usuarios</li>
+          <li>Protección de la información</li>
+          <li>Seguridad de equipos</li>
+          <li>Autorización de cambios y mantenimientos</li>
+        </ul>
+        <div class="tags"><span class="tag w">Seguridad de la Información</span></div>
+      </div>
+      <div class="card">
+        <div class="card-h"><div class="icon-box"><svg class="i"><use href="#network"/></svg></div><h3>Redes</h3></div>
+        <ul>
+          <li>Monitoreo de conectividad</li>
+          <li>Disponibilidad de enlaces</li>
+          <li>Identificación de fallas</li>
+          <li>Seguimiento de incidentes</li>
+          <li>Atención con proveedores</li>
+        </ul>
+        <div class="tags"><span class="tag w">Monitoreo y Gestión de Eventos</span><span class="tag w">Gestión de Niveles de Servicio</span></div>
+      </div>
+    </div>
+    <div class="banner rise"><svg class="i"><use href="#target"/></svg><div><b>Resultado con ITIL 4:</b> <span>accesos controlados, fallas detectadas a tiempo y proveedores bajo seguimiento.</span></div></div>
+  </div>
+</section>
+
+<!-- 5 · DIAGNÓSTICO -->
+<section class="slide">
+  <div class="wrap">
+    <div class="head rise"><div class="eyebrow">05 · Diagnóstico</div>
+      <h2 class="s-title">Diagnóstico de ITIL 4 en EVOR</h2>
+      <p class="s-sub">EVOR tiene actividades de gestión, pero falta formalizar procesos, documentación, seguimiento y medición.</p></div>
+    <div class="diag rise">
+      <div class="card donut-wrap">
+        <div class="donut">
+          <svg viewBox="0 0 160 160" fill="none" stroke-width="14"><circle class="bg" cx="80" cy="80" r="70"/><circle class="fg" cx="80" cy="80" r="70"/></svg>
+          <div class="val"><b>36.36%</b><small>Cumplimiento</small></div>
+        </div>
+        <p style="margin-top:14px;font-size:13px;color:var(--faint)">11 prácticas evaluadas</p>
+      </div>
+      <div class="card">
+        <div class="bars">
+          <div class="bar-row"><div class="lbl"><span>Cumplidas completamente</span><b>0</b></div><div class="track"><div class="fill f1" style="width:0%"></div></div></div>
+          <div class="bar-row"><div class="lbl"><span>Parcialmente cumplidas</span><b>8</b></div><div class="track"><div class="fill f2" style="width:72.7%"></div></div></div>
+          <div class="bar-row"><div class="lbl"><span>No cumplidas</span><b>3</b></div><div class="track"><div class="fill f3" style="width:27.3%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="opps rise">
+      <div class="opp"><svg class="i"><use href="#list"/></svg>Gestión de problemas</div>
+      <div class="opp"><svg class="i"><use href="#gauge"/></svg>Niveles de servicio</div>
+      <div class="opp"><svg class="i"><use href="#search"/></svg>Análisis de causas raíz</div>
+      <div class="opp"><svg class="i"><use href="#refresh"/></svg>Mejora continua</div>
+    </div>
+    <p class="note rise">Principales áreas de oportunidad.</p>
+  </div>
+</section>
+
+<!-- 6 · MEJORAS -->
+<section class="slide">
+  <div class="wrap">
+    <div class="head rise"><div class="eyebrow">06 · Propuestas y conclusión</div>
+      <h2 class="s-title">Propuestas de mejora</h2></div>
+    <div class="recs rise" style="margin-top:clamp(12px,2vh,22px)">
+      <div class="card rec"><div class="icon-box"><svg class="i"><use href="#headset"/></svg></div><div><span class="n">01</span><p>Mesa de Servicio centralizada</p></div></div>
+      <div class="card rec"><div class="icon-box"><svg class="i"><use href="#list"/></svg></div><div><span class="n">02</span><p>Estandarizar registro, clasificación y seguimiento de incidentes</p></div></div>
+      <div class="card rec"><div class="icon-box"><svg class="i"><use href="#edit"/></svg></div><div><span class="n">03</span><p>Formalizar autorización y documentación de cambios</p></div></div>
+      <div class="card rec"><div class="icon-box"><svg class="i"><use href="#gauge"/></svg></div><div><span class="n">04</span><p>Definir KPI y niveles de servicio</p></div></div>
+      <div class="card rec"><div class="icon-box"><svg class="i"><use href="#lock"/></svg></div><div><span class="n">05</span><p>Mejorar controles de acceso y seguridad de la información</p></div></div>
+      <div class="card rec"><div class="icon-box"><svg class="i"><use href="#book"/></svg></div><div><span class="n">06</span><p>Base de conocimientos y ciclo de mejora continua</p></div></div>
+    </div>
+    <div class="concl rise">
+      <div><span class="eyebrow" style="margin-bottom:6px">Conclusión</span>
+        <div style="font-size:clamp(13.5px,1.15vw,16px);color:var(--muted);max-width:420px">ITIL 4 permite a EVOR cambiar su forma de gestionar los servicios de TI.</div></div>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <span class="from">Reactiva</span><svg class="i"><use href="#arrow"/></svg>
+        <span class="to">Organizada · Preventiva · Segura · Medible</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="controls">
+  <button class="ctl" id="prev" aria-label="Anterior"><svg class="i"><use href="#left"/></svg></button>
+  <div class="dots"></div>
+  <button class="ctl" id="next" aria-label="Siguiente"><svg class="i"><use href="#arrow"/></svg></button>
+</div>
+
+<script src="deck.js"></script>
+</body>
+</html>
